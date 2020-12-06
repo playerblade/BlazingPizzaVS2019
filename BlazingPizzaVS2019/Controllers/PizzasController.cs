@@ -23,9 +23,9 @@ namespace BlazingPizzaVS2019.Controllers
 
         // GET: api/Pizzas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Pizza>>> GetPizzas()
+        public IEnumerable<Pizza> GetPizzas()
         {
-            return await _context.Pizzas.ToListAsync();
+            return _context.Pizzas.ToList();
         }
 
         // GET: api/Pizzas/5
